@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mayura Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #ffb6b9;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .item:hover {
+      transform: scale(1.05);
+    }
+    .item img {
+      max-width: 100%;
+      border-radius: 8px;
+      height: 160px;
+      object-fit: cover;
+    }
+    #about, #contact {
+      padding: 2rem;
+      background-color: #ffe0e9;
+      border-top: 1px solid #ffb6b9;
+    }
+    footer {
+      background: #ffb6b9;
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .carousel .item {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mayura Bakery</h1>
+    <p>Fresh Bakes, Sweet Moments</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Bakery Display" />
+    <h2>Welcome to Mayura Bakery</h2>
+    <p>Your favorite local bakery serving love in every bite.</p>
+  </section>
+
+  <section id="menu">
+    <h2 style="text-align:center;">Our Menu</h2>
+    <div class="carousel">
+      <div class="item">
+        <img src="https://deliciouslittlebites.com/wp-content/uploads/2021/01/Mini-Red-Velvet-Cupcakes-Recipe-Image-1-3.jpg" alt="Cupcakes">
+        <h3>Cupcakes</h3>
+        <p>Delicious frosted cupcakes - 15</p>
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/originals/66/6b/81/666b81445f8a9f853615d7cd04e41ede.jpg" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+        <p>Rich and moist layered chocolate cake - 350</p>
+      </div>
+      <div class="item">
+        <img src="https://images.creativemarket.com/0.1.0/ps/111637/1360/2040/m1/fpnw/wm1/pchebk0stphvoeayhygmq9pnoaubcheyjbtvgqvdmreivv5uvksvwwubjfglcqx6-.jpg" alt="Bread">
+        <h3>Fresh Bread</h3>
+        <p>Soft and warm homemade bread - 30</p>
+      </div>
+      <div class="item">
+        <img src="https://th.bing.com/th/id/OIP.tGTONPZgYLMGhxGqj1oevAHaEK?w=284&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Cool Drinks">
+        <h3>Cool Drinks</h3>
+        <p>Refreshing beverages - 25</p>
+      </div>
+      <div class="item">
+        <img src="https://img.freepik.com/free-photo/slice-strawberry-cake-decorated-with-fresh-berries-whipped-cream-generated-by-ai_188544-9814.jpg" alt="Strawberry Cake">
+        <h3>Strawberry Cake</h3>
+        <p>Fresh and fruity delight - 280</p>
+      </div>
+      <div class="item">
+        <img src="https://img.freepik.com/free-photo/tasty-croissants-table_144627-16227.jpg" alt="Croissants">
+        <h3>Butter Croissants</h3>
+        <p>Flaky, buttery croissants - 40</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We're a family-owned bakery in Dessertville, baking with love since 1999. Our goal is to make your day a little sweeter with every treat we make.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:mayurabakery@gmail.com">mayurabakery@gmail.com</a></p>
+    <p>Phone: 9966936344</p>
+    <p>Address: Rajvihar Complex, New Bus Stand Road, Opp. Croma, Kurnool - 518001</p>
+    <iframe src="https://g.co/kgs/DXSYTT2" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 1999 Mayura Bakery. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

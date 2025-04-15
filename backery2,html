@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mayura Bakery</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    :root {
+      --bg: #fff8f0;
+      --text: #333;
+      --header: #ffb6b9;
+      --accent: #ff6f91;
+    }
+
+    body.dark-mode {
+      --bg: #1c1c1c;
+      --text: #f5f5f5;
+      --header: #2a2a2a;
+      --accent: #ff6f91;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .toggle-btn {
+      margin-top: 1rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .swiper {
+      padding: 2rem 1rem;
+    }
+
+    .swiper-slide {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .swiper-slide:hover {
+      transform: scale(1.05);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      color: var(--accent);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--accent);
+    }
+
+    #about, #contact, #newsletter {
+      padding: 2rem;
+      background-color: #ffe0e9;
+      border-top: 1px solid #ffb6b9;
+    }
+
+    .order-btn {
+      display: block;
+      margin: 1rem auto;
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .gallery img {
+      width: 250px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--header);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+    }
+
+    input[type="email"] {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 250px;
+    }
+
+    button.subscribe {
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mayura Bakery</h1>
+    <p>Fresh Bakes, Sweet Moments</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Bakery Display" />
+    <h2>Welcome to Mayura Bakery</h2>
+    <p>Your favorite local bakery serving love in every bite.</p>
+    <a href="https://wa.me/919966936344" class="order-btn" target="_blank">Order Now on WhatsApp</a>
+  </section>
+
+  <section id="menu">
+    <h2 style="text-align:center;">Our Menu</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://i.imgur.com/jj5p8nN.jpg"><h3>Cupcakes</h3><p>₹15</p></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/9sHHDsH.jpg"><h3>Chocolate Cake</h3><p>₹350</p></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/Nq9yeHx.jpg"><h3>Fresh Bread</h3><p>₹30</p></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/sQzHKPj.jpg"><h3>Cool Drinks</h3><p>₹25</p></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/HZTT4Fj.jpg"><h3>Strawberry Cake</h3><p>₹280</p></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/HVuFVaU.jpg"><h3>Butter Croissants</h3><p>₹40</p></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/6flIvth.jpg"><h3>Tiramisu</h3><p>₹150</p></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/CU8Kbdr.jpg"><h3>Cookies</h3><p>₹10</p></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We're a family-owned bakery in Dessertville, baking with love since 1999. Our goal is to make your day a little sweeter with every treat we make.</p>
+  </section>
+
+  <section id="newsletter">
+    <h2 style="text-align:center;">Subscribe for Offers</h2>
+    <div style="text-align:center;">
+      <input type="email" placeholder="Enter your email" />
+      <button class="subscribe">Subscribe</button>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/jj5p8nN.jpg" onclick="openImage(this.src)" />
+      <img src="https://i.imgur.com/9sHHDsH.jpg" onclick="openImage(this.src)" />
+      <img src="https://i.imgur.com/HZTT4Fj.jpg" onclick="openImage(this.src)" />
+      <img src="https://i.imgur.com/HVuFVaU.jpg" onclick="openImage(this.src)" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:mayurabakery@gmail.com">mayurabakery@gmail.com</a></p>
+    <p>Phone: 9966936344</p>
+    <p>Address: Rajvihar Complex, New Bus Stand Road, Opp. Croma, Kurnool - 518001</p>
+    <iframe src="https://www.google.com/maps?q=Rajvihar+Complex+Kurnool&output=embed" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 1999 Mayura Bakery. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function openImage(src) {
+      const newTab = window.open();
+      newTab.document.write('<img src="' + src + '" style="width:100%;">');
+    }
+  </script>
+</body>
+</html>
